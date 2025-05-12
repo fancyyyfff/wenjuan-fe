@@ -1,0 +1,28 @@
+.cavas {
+    min-height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.component-wrapper {
+    margin: 12px;
+    padding: 12px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+
+    &:hover {
+        border-color: #d9d9d9;
+    }
+}
+
+.selected {
+    border-color: rgb(102, 154, 199) !important;
+}
+
+.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.component {
+    pointer-events: none;
+}

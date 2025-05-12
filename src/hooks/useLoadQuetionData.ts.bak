@@ -1,0 +1,14 @@
+import { useParams } from "react-router-dom";
+import { getQuetionService } from "../service/quetion";
+import { useRequest } from "ahooks";
+
+function updateQuestionService() {
+  const { id = "" } = useParams();
+  async function getQuetion() {
+    const data = await getQuetionService(id);
+    return data;
+  }
+  const {loading, data, error} = useRequest(getQuetion);
+  return {loading,data};
+}
+export default updateQuestionService;
